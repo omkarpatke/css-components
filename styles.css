@@ -301,6 +301,7 @@ hr{
     height: 3rem;
     background-color: rgb(88, 88, 88);
     color: white;
+    cursor: pointer;
 }
 .snackBar h3{
     color: rgb(168, 90, 168);
@@ -341,6 +342,9 @@ hr{
     border-radius: 25px;
     cursor: pointer;
 }
+.chips ul li:hover{
+    background-color:rgb(202, 201, 201); ;
+}
 .chips i{
     display: flex;
     justify-content: center;
@@ -349,6 +353,6 @@ hr{
     width: 1.6rem;
 }
 .chips i:hover{
-    background-color: gray;
+    background-color: rgb(163, 162, 162);
     border-radius: 50%;
 }
