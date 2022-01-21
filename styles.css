@@ -155,6 +155,13 @@ nav a{
     padding-left: 0.6rem;
     width: auto;
 }
+.drawer-card ul p{
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+hr{
+    margin-top: 1rem;
+}
 .drawer-card ul li span{
     margin-right: 2rem;
 }
