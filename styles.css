@@ -309,3 +309,39 @@ nav a{
     background-color: rgb(73, 73, 73);
     border-radius: 50%;
 }
+
+/* chips */
+
+.chips ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    background-color: #f0eeee;
+    padding: 2rem;
+}
+.chips ul li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 8rem;
+    margin-left: 2rem;
+    height: 2rem;
+    background-color: lightgray;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.chips i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.6rem;
+    width: 1.6rem;
+}
+.chips i:hover{
+    background-color: gray;
+    border-radius: 50%;
+}
