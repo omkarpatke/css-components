@@ -310,7 +310,15 @@ hr{
 }
 
 /* snackBar */
-
+.snack-container{
+    padding: 2rem;
+}
+.snack-container h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
 .snackBar{
     width: 30rem;
     display: flex;
@@ -336,6 +344,48 @@ hr{
 .snackBar i:hover{
     background-color: rgb(73, 73, 73);
     border-radius: 50%;
+}
+.snack-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.snack-btns button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.2rem;
+    width: auto;
+    padding: 1rem;
+    border: 1px solid purple;
+    color: purple;
+    background-color: rgb(250, 243, 250);
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+.snack-btns button:hover{
+    color: white;
+    background-color: purple;
+
+}
+.invisible{
+    display: none;
+}
+.baselineStyle{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.leadingStyle{
+    position: absolute;
+    bottom: 1rem;
+    left: 33rem;
+}
+.stackedStyle{
+    position: absolute;
+    bottom: 2rem;
 }
 
 /* chips */
