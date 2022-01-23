@@ -24,12 +24,62 @@
          <a href="tabs.html">Tabs</a>
      </nav>
 
-    <div class="container">
-        <div class="snackBar">
+    <div class="snack-container">
+        <h2>Click the below buttons you will see the snackbar.
+        </h2>
+        <div class="snack-btns">
+            <button class="baseline-btn">BASELINE</button>
+            <button class="leading-btn">LEADING</button>
+            <button class="stacked-btn">STACKED</button>
+        </div>
+        <div class="snackBar invisible">
             <p>Can't send photo. Retry in 5 seconds.</p>
             <h3>Retry</h3>
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times" id="removeIcon"></i>
         </div>
     </div>
+
+    <script>
+        var baselineBtn = document.querySelector('.baseline-btn');
+        var leadingBtn = document.querySelector('.leading-btn');
+        var stackedBtn = document.querySelector('.stacked-btn');
+        var snackbar = document.querySelector('.snackBar');
+        var removeBtn = document.querySelector('#removeIcon');
+
+        baselineBtn.addEventListener('click' , () => {
+            snackbar.classList.remove('invisible');
+            snackbar.classList.add('baselineStyle');
+
+            removeBtn.addEventListener('click' , () => {
+                snackbar.classList.add('invisible');
+            })
+        });
+
+
+        leadingBtn.addEventListener('click' , () => {
+            snackbar.classList.remove('invisible');
+            snackbar.classList.add('leadingStyle');
+
+            removeBtn.addEventListener('click' , () => {
+                snackbar.classList.add('invisible');
+            })
+        });
+
+        
+        stackedBtn.addEventListener('click' , () => {
+            snackbar.classList.remove('invisible');
+            snackbar.classList.add('stackedStyle');
+
+            setTimeout(() => {
+                snackbar.classList.add('invisible');
+            },2000);
+
+            removeBtn.addEventListener('click' , () => {
+                snackbar.classList.add('invisible');
+            })
+        });
+
+          
+    </script>
 </body>
 </html>
