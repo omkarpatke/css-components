@@ -12,6 +12,7 @@
 		/>
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
+
 <body>
      <nav>
          <a href="index.html">Cards</a>
@@ -26,29 +27,36 @@
 
     <div class="container">
         <div class="chips">
-            <ul>
-                <li>
-                    <p>apple</p>
-                    <i class="fas fa-times"></i>
-                </li>
-                <li>
-                    <p>banana</p>
-                    <i class="fas fa-times"></i>
-                </li>
-                <li>
-                    <p>orange</p>
-                    <i class="fas fa-times"></i>
-                </li>
-                <li>
-                    <p>graps</p>
-                    <i class="fas fa-times"></i>
-                </li>
-                <li>
-                    <p>kiwi</p>
-                    <i class="fas fa-times"></i>
-                </li>
-            </ul>
+            <form class="form" >
+                <ul class="ul">
+                    <input type="text" class="input" />
+                    <li>
+                        <p>Sample</p>
+                        <i class="fas fa-times" id="cross"></i>
+                    </li>
+                </ul>
+            </form>
         </div>
     </div>
+    <script>
+        var inputEl = document.querySelector('.input');
+        var form = document.querySelector('.form');
+        var list = document.querySelector('.ul');
+        var deleteBtn = document.querySelectorAll('#cross');
+
+        form.addEventListener('submit' , (e) => {
+            e.preventDefault();
+            var newLi = document.createElement('li');
+            newLi.innerHTML = `<p>${inputEl.value}</p> <i class="fas fa-times" id='cross'></i>`;
+            list.appendChild(newLi);
+            inputEl.value = '';
+        });
+
+       
+        deleteBtn.addEventListener('click' , () => {
+            console.log('clicked')
+        })
+    
+    </script>
 </body>
 </html>
