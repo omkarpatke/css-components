@@ -402,6 +402,11 @@ hr{
     position: absolute;
     bottom: 2rem;
 }
+.newSnackBar{
+    position: relative;
+    margin: 2rem 30rem;
+
+}
 
 /* chips */
 
