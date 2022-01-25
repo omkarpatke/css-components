@@ -51,6 +51,21 @@
             list.appendChild(newLi);
             inputEl.value = '';
         });
+
+        
+        
+
+        list.addEventListener('change' , (e) => {
+            let chip = e.target.parentElement;
+            console.log(chip)
+            chip.addEventListener('click' , (e) => {
+                e.target.parentElement.style.display = 'none';
+            })
+            
+            
+            
+        })
+        
     </script>
 </body>
 </html>
