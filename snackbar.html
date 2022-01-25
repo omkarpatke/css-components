@@ -45,6 +45,7 @@
         var stackedBtn = document.querySelector('.stacked-btn');
         var snackbar = document.querySelector('.snackBar');
         var removeBtn = document.querySelector('#removeIcon');
+        var container = document.querySelector('.snack-container');
 
         baselineBtn.addEventListener('click' , () => {
             snackbar.classList.remove('invisible');
@@ -53,6 +54,10 @@
             removeBtn.addEventListener('click' , () => {
                 snackbar.classList.add('invisible');
             })
+
+            setTimeout(() => {
+                snackbar.classList.add('invisible');
+            },1000);
         });
 
 
@@ -63,20 +68,29 @@
             removeBtn.addEventListener('click' , () => {
                 snackbar.classList.add('invisible');
             })
+
+            setTimeout(() => {
+                snackbar.classList.add('invisible');
+            },1000);
         });
 
         
         stackedBtn.addEventListener('click' , () => {
-            snackbar.classList.remove('invisible');
-            snackbar.classList.add('stackedStyle');
+            // snackbar.classList.remove('invisible');
+            // snackbar.classList.add('stackedStyle');
+            
+            let newSnackBar = document.createElement('div');
+            newSnackBar.classList.add('snackBar')
+            newSnackBar.innerHTML = `<p>Can't send photo. Retry in 5 seconds.</p>
+            <h3>Retry</h3>
+            <i class="fas fa-times" id="removeIcon"></i>`;
+
+            container.appendChild(newSnackBar);
 
             setTimeout(() => {
-                snackbar.classList.add('invisible');
+                newSnackBar.classList.add('invisible');
             },2000);
 
-            removeBtn.addEventListener('click' , () => {
-                snackbar.classList.add('invisible');
-            })
         });
 
           
